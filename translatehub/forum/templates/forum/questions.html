@@ -1,0 +1,36 @@
+{% extends 'translations/base.html' %}
+    {% load static %}  
+    {% block title %}{% endblock %}
+    {% block other_relations %}
+        <link rel='stylesheet' href='{% static 'stylesheets/questions.css' %}'>
+    {% endblock %}
+    {% block main_block %}
+        <div class='top_bar'>
+            <form class='search_question_form' method='get'>
+                {{ search_question_form }}
+                <button type='submit'>Искать</button>
+            </form>
+            <button>Задать вопрос</button>
+            <div class='categories-table'>
+                {% for category in question_categories %}
+                    <a class='category' href=''>{{ category.title }}</a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class='section section-two-columns'>
+            <div class='questions'>
+                {% for question in questions_list %}
+                <div class='question_card'>
+                    <h3>{{ question.title }}</h3>
+                    <span class='question-text'>{{ question.text }}</span>
+                    <div class='question_data'>
+                        
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class='sidebar-right'>
+
+            </div>
+        </div>
+    {% endblock %}

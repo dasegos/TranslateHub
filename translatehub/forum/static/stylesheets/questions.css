@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Huninn&display=swap');
+
+
+:root {
+    --blue: #083466;
+    --ligth-blue: #446e9f;
+}
+
+
+.categories-table {
+    display: flex;
+    flex-wrap: wrap;
+    margin: calc(var(--index)*0.5);
+}
+
+.search_question_form {
+    display: inline;
+    /* width: calc(var(--index)*2); */
+    background-color: #000000;
+}
+
+.search_question_form label {
+    display: none;
+}
+
+.input_text {
+    width: calc(var(--index)*20);
+    height: calc(var(--index)*1.8);
+    font-size: calc(var(--index)*0.6);
+    outline: none;
+}
+
+
+.category {
+    padding: calc(var(--index)*0.4);
+    margin: calc(var(--index)*0.06);
+    background-color: var(--charcoal);
+    border-radius: calc(var(--index)*0.1);
+    color: var(--white);    
+    text-decoration: none;
+}
+
+.category:hover {
+    background-color: var(--orange);
+    transition: all ease-in .2s;
+}
+
+.section-two-columns {
+    display: flex;
+    flex-direction: row;
+}
+
+.questions {
+    width: 60vw;
+    background-color: #083466;
+}
+
+.question_card {
+    display: block;
+    width: 100%;
+    padding: calc(var(--index)*0.7);
+    /* margin: calc(var(--index)*0.7); */
+}
+
+.question-text {
+    word-break: break-all;
+}

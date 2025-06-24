@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang='ru'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        {% comment %} <link rel='icon' href='{% static 'icons/cookit.png' %}' type="image/x-icon"> {% endcomment %}
+        {% block title %}{% endblock %}
+        <link rel='stylesheet' href='{% static 'stylesheets/base.css' %}'>
+        <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+        {% block other_relations %}
+        {% endblock %}
+    </head>
+    <body>
+        <div class='wrapper'>
+            <div class='content'>
+                <header>
+                    <nav class='main-navbar'>
+
+                    </nav>
+                </header>
+                <main>
+                    {% block main_block %}
+                    {% endblock %}
+                </main>
+            </div>
+            <footer>
+                <span></span>
+                <div class='footer-info'>
+                    <div class='column'>
+                    </div>
+                    <div class='column'>
+                    </div>
+                    <div class='column'>
+                    </div>
+                    <div class='user-info column'>
+                        <span>
+                            <img src='{% static 'images/footer/instagram.png' %}' alt='instagram-icon' class='icon'> <a href={{ instagram_link }}>Instagram</a>
+                        </span>
+                        <span>
+                            <img src='{% static 'images/footer/twitter.png' %}' alt='twitter-icon' class='icon'> <a href={{ twitter_link }}>Twitter</a>
+                        </span>
+                        <span>
+                            <img src='{% static 'images/footer/telegram.png' %}' alt='telegram-icon' class='icon'> <a href={{ telegram_link }}>Telegram</a>
+                        </span>
+                        <span>
+                            <img src='{% static 'images/footer/vk.png' %}' alt='vkontakte-icon' class='icon'> <a href={{ vkontakte_link }}>VKontakte</a>
+                        </span>
+                        <span>
+                            <img src='{% static 'images/footer/youtube.png' %}' alt='youtube-icon' class='icon'> <a href={{ youtube_link }}>Youtube</a>
+                        </span>
+                        <span>
+                            <img src='{% static 'images/footer/github.png' %}' alt='github-icon' class='icon'> <a href={{ github_link }}>GitHub</a>
+                        </span>
+
+                    </div>
+                </div>
+                <span>all rights reserved © Copyright 2025 TextHub</span>
+            </footer>
+        </div>
+    </body>
+</html>
